@@ -1,0 +1,96 @@
+.login-logo{
+    display: block;
+    margin: 0 auto;
+
+    padding-bottom: 160px;
+    height: 60px;
+}
+
+.register-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: flex-stretch;
+    flex-flow: row no-wrap;
+    overflow: hidden;
+}
+
+.column-left {
+    background: #fff;
+    box-sizing: border-box;
+    flex: 640px 0 0;
+    padding: 100px 94px 0 94px;
+}
+
+.column-right {
+    background: #5446DB;
+    flex: 2 0 0;
+}
+
+.bottom-button {
+    background: #5446DB;
+    border-radius: 6px;
+    font-weight: 900;
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    height: 54px;
+    border: none;
+    margin-top: 14px;
+}
+.inner-input {
+    box-sizing: border-box;
+    background-color: #F1EFFC;
+    color: #000;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    width: 100%;
+    height: 56px;
+    font-weight: 700;
+    padding-left: 20px;
+    padding-top: 14px;
+    margin-top: 14px;
+    position: relative;
+    z-index: 0;
+}
+
+.inner-input:focus {
+    outline: none;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.label {
+    width: 0;
+    height: 0;
+    white-space: nowrap;
+    color: #8B87A2;
+    padding-left: 20px;
+    z-index: 1;
+    position: relative;
+    display: block;
+    padding-top: 10px;
+    margin: -48px 0 48px 0;
+    font-weight: 900;
+    font-size: 16px;
+    transition: font-size 0.2s ease-out, margin 0.2s ease-out;
+}
+
+.inner-input:focus~.label {
+    padding-left: 20px;
+    z-index: 1;
+    position: relative;
+    display: block;
+    padding-top: 10px;
+    margin: -56px 0 56px 0;
+    font-weight: 900;
+    font-size: 12px;
+}
+
+.label-active {
+    margin: -56px 0 56px 0;
+    font-size: 12px;
+}

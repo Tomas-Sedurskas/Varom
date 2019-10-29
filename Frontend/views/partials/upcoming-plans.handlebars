@@ -1,0 +1,13 @@
+{{#each plan}}
+    <li class="upcoming-plans-item">
+        <span class="text-align-center date-head">
+            {{renderFullDate this.eventStart}} - {{renderFullDate this.eventEnd}}
+        </span>
+        <div class="plan-card">
+            {{this.title}}<br>
+            {{this.description}}<br>
+        </div>
+        
+    </li>
+{{/each}}
+

@@ -1,0 +1,11 @@
+{{> nav-bar}}
+<div class="container">
+    <div>Create plan</div>
+    <form action="/myPlans/create" method="post">
+        <input type="text" name="title" />
+        <input type="text" name="description" />
+        <input type="date" name="eventStart">
+        <input type="date" name="eventEnd">
+        <button type="Submit">Create Plan</button>
+    </form>
+</div>

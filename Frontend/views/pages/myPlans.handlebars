@@ -1,0 +1,54 @@
+{{> nav-bar}}
+<div class="container">
+    <div class="banner-l">
+        <!-- Img goes here -->
+        <div class="banner-main-text">
+            <h1>My Plans</h1>
+            <div class="banner-location-text">
+                <img src="" />
+                <span>Current location</span>
+            </div>
+        </div>
+       
+    </div>
+
+    <div class="row">
+        <div class="row-title">
+            <h2 >Current Plan</h2>
+        </div>
+        <div class="row-main">
+            
+        </div>
+    </div>
+
+    <div class="row">
+        <a class="create-new-plan-button" href="/myPlans/create">Create new plan</a>
+    </div><br><br>
+   
+
+    <div class="row">
+        <div class="row-title">
+            <h2>Upcomming Plans</h2>
+            <a href="">See all ></a>
+        </div>
+        
+        <div class="row-main">
+            <ul class="upcoming-plans-list">
+                {{> upcoming-plans}}
+            </ul>
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <div>
+            <h2>Past Plans</h2>
+            <a href="">See all ></a>
+        </div>
+    
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    
+</div>

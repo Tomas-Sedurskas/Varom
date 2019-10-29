@@ -1,0 +1,26 @@
+<form action="/users/register" method="post" enctype="application/json" >
+    <div>
+        {{#each errors}}
+        {{this.msg}}
+        {{/each}}
+    </div>
+    <input id="username" type="text" name="username" placeholder="username" value="{{username}}" />
+    <div>
+        {{#each errors.username}}
+        {{this.msg}}
+        {{/each}}
+    </div><br><br>
+    <input id="password" type="text" name="password" placeholder="password" value="{{password}}" />
+    <div>
+        {{#each errors.password}}
+        {{this.msg}}
+        {{/each}}
+    </div><br><br>
+    <input id="confirmPassword" type="text" name="confirmPassword" placeholder="Confirm Password" value="{{confirmPassword}}" />
+    <div>
+        {{#each errors.confirmPassword}}
+        {{this.msg}}
+        {{/each}}
+    </div>
+    <button type="Submit">Register</button>
+</form>
