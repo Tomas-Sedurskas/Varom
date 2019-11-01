@@ -6,14 +6,10 @@ const path = require('path');
 const passport = require('passport');
 const session = require('express-session')
 
-
-
 require('dotenv').config();
-
 
 const app = express();
 require('./config/passport')(passport);
-
 
 const port = process.env.PORT || 5500
 
@@ -67,18 +63,15 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-
-
 const exploreRouter = require('./routes/explore')
-const myPlansRouter = require('./routes/myPlans')
+const myEventsRouter = require('./routes/myEvents')
 const profileRouter = require('./routes/profile')
 const activitiesRouter = require('./routes/activities');
 const usersRouter = require('./routes/users');
 
 //Pages
 app.use('/explore', exploreRouter);
-app.use('/myPlans', myPlansRouter);
+app.use('/myEvents', myEventsRouter);
 app.use('/profile', profileRouter);
 app.use('/activities', activitiesRouter);
 app.use('/users', usersRouter);

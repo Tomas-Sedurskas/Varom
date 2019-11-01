@@ -1,0 +1,16 @@
+{{> nav-bar}}
+<div class="container">
+    <div>Create Event</div>
+    <form action="/myEvents/create" method="post">
+        <input type="text" name="title" placeholder="title"/><br>
+        <input type="text" name="description" placeholder="description"/><br>
+        <input type="date" name="eventStart"><br>
+        <input type="date" name="eventEnd"><br>
+        <input type="radio" name="public" value="true" style="width: 24px; height: 24px;" />
+        <label>Public event</label><br>
+
+        <input type="radio" name="public" value="false" style="width: 24px; height: 24px;" />
+        <label>Private event</label><br>
+        <button type="Submit">Create Event</button>
+    </form>
+</div>

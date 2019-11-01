@@ -1,0 +1,66 @@
+{{> nav-bar}}
+<div class="container">
+    <div class="row">
+        <div class="event-header">
+            <img src="" />
+
+            
+
+            <div class="text-align-center">
+                <p>Friends list</p>
+                <ul>
+                    <li></li>
+                </ul>
+                <a href="/myEvents/{{event._id}}/invite">Invite fiends</a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>{{event.title}}</h2>
+            <div>{{renderFullDate event.eventStart}} - {{renderFullDate event.eventEnd}}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a class="event-button" href="/myEvents/{{event._id}}/edit">Edit Event</a>
+        </div>
+        <div class="gutter">
+
+        </div>
+        <div class="col">
+            <a class="event-button" href="/myEvents/{{event._id}}/delete">Delete Event</a>
+        </div>
+    </div>
+    <div class="row">
+        <a href="">Event Details</a>
+    </div>
+    
+    <form class="row" action="/myEvents/{{event._id}}/share" method="post">
+        <button class="event-button">Share Event</button>
+    </form>
+    
+</div>
+<!-- Banner will be the first activity img -->
+<!-- Add options to choose the img from the activities added-->
+{{event.creator}}<br>
+Public: {{event.public}}<br>
+<br>
+{{event.description}}<br>
+
+
+<br><br><br>
+
+
+<br><br><br>
+
+<a href="/myEvents/{{event._id}}/activities">Event Activities</a>
+
+<br><br><br>
+<h2>Trip photos</h2>
+<a href="/myEvents/{{event._id}}/photos">Add photo</a>
+
+<br><br>
+<h2>Post Event</h2>
+

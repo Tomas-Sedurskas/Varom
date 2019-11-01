@@ -3,13 +3,21 @@
     <div class="top-banner-tab">
         <div class="row">
             <div>
-                <h2>{{username}}</h2>
-                <button>Edit Profile</button>
+                <h2>{{data.displayName}}</h2>
+                <a href="/profile/create">Create Profile</a>
             </div>
-            <div>Description here.</div>
+            <div>{{data.bio}}</div>
         </div>
        
     </div>
+
+    <div>
+        <h1>Data</h1>
+        {{#each data.events}}
+            {{this.title}}<br><br>
+        {{/each}}
+    </div>
+
     <div class="row">
         <h2>My photos</h2>
         <ul>

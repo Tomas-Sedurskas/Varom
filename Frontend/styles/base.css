@@ -20,7 +20,16 @@ ul{
 }
 .row{
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
+}
+.col{
+    display: flex;
+    flex: 1;
+    flex-flow: column wrap;
+}
+.gutter{
+    display: flex;
+    width: 20px;
 }
 .top-banner-tab{
     background: #fff;

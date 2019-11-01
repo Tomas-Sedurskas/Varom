@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
-
+const mongoose = require('mongoose');
 let User = require('../models/user.model');
 
 
@@ -58,7 +58,11 @@ router.route('/register').post((req, res) => {
                         confirmPassword
                     })
                 } else {
-                    const newUser = new User({ username, password });
+                    const newUser = new User({ 
+                        username, 
+                        password,
+                        profile: mongoose.Types.ObjectId()
+                    });
 
                     bcrypt.genSalt(10, (err, salt) => 
                         bcrypt.hash(newUser.password, salt, (err, hash) => {
