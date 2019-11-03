@@ -1,0 +1,17 @@
+<h1>Create activity</h1>
+
+<form action="/activities/create" method="post">
+    <input type="text" name="title" placeholder="title" />
+    <input type="text" name="description" placeholder="description" />
+    <input type="text" name="budget" placeholder="budget" />
+    <div>Budget context</div>
+    <select name="budgetContext">
+        <option value="/Per Person">Per person</option>
+        <option value="Per Day">Per Day</option>
+        <option value="Per Week">Per Week</option>
+        <option value="Total">Total</option>
+        <option value="" selected="selected" >None</option>
+    </select>
+    <input type="text" name="location" placeholder="Location" />
+    <button>Create Activity</button>
+</form>

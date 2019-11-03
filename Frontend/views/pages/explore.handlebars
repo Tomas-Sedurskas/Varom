@@ -1,6 +1,74 @@
 {{> nav-bar}}
 <div class="container">
-   {{> hot-destinations}}
+
+   <div class="row">
+      <div class="explore-header">
+
+         <img src="" />
+
+         <div>
+            <div>
+               <img src="" alt="users avatar">
+               <div>
+                  <span>Picture by:</span>
+                  <h6>Name Lastname</h6>
+               </div>
+            </div>
+
+            <div>
+               <img src="" alt="location icon" />
+               <span>Country, City</span>
+            </div>
+         </div>
+         
+         <h1>Explore</h1>
+         
+      </div>
+   </div>
+   
+   <div class="row">
+      <div class="row">
+         <h2>Hot destinations</h2>
+         <a href="/destinations">See all</a>
+      </div>
+      <div class="row">
+         {{> hot-destinations}}
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="row">
+         <h2>Friend Feed</h2>
+         <a href="/friend-feed">See all</a>
+      </div>
+     
+      {{> friend-feed}}
+   </div>
+
+   <div class="row">
+      <div class="row">
+         <h2>Popular Activities</h2>
+         <a href="/activities">See all</a>
+      </div>
+      <div class="row">
+         {{> popular-activities}}
+      </div>
+   </div>
+
+
+   <div class="row">
+      <div class="row">
+         <h2>Public Events</h2>
+         <a href="/public-events">See all</a>
+      </div>
+      <div class="row">
+         {{> public-events}}
+      </div>
+   </div>
+
+   
+
+  
 </div>
     
     

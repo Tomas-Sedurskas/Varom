@@ -1,0 +1,9 @@
+{{> nav-bar}}
+<h1>Activities</h1>
+<div>Activity search field</div><br>
+<h2>Activity creation</h2>
+<a href="/activities/create">Create an activity</a><br><br>
+<h2>All activities</h2>
+{{#each activities}}
+    {{this}}
+{{/each}}
