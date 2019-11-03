@@ -62,6 +62,14 @@ router.route('/:id/invite').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/:id/event-details').get((req, res) => {
+    Event.findById(req.params.id)
+        .then(event => res.render('event-details', {
+            event
+        }))
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
 
 
 

@@ -9,9 +9,24 @@ const activitySchema = new Schema({
         unique: true,
         minlength: 3
     },
-    type:{
+    description:{
+        type: String,
+        required: false,
+        unique: false
+    },
+    budget:{
         type: String,
         required: true,
+        unique: false
+    },
+    budgetContext: {
+        type: String,
+        required: true,
+        unique: false
+    },
+    img:{
+        type: String,
+        required: false,
         unique: false
     },
     location: {
@@ -19,12 +34,10 @@ const activitySchema = new Schema({
         required: true,
         unique: false
     },
-    likes: {
+    likes: [{
         type: Schema.Types.ObjectId,
-        ref: 'Profile',
-        required: true,
-        unique: true
-    },
+        ref: 'Profile'
+    }]
 },{
     timestamps: true
 });

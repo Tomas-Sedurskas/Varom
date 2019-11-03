@@ -29,7 +29,6 @@ router.route('/').get(ensureAuthenticated, (req, res) => {
         {$lookup: {from: "events", as: "events", localField: "_id", foreignField: "creator"}}
     ])
     .then(data => {
-        console.log(data[0])
         res.render('profile', { data: data[0] })
     })
 });

@@ -1,23 +1,32 @@
 const router = require('express').Router();
+const { ensureAuthenticated } = require('../config/auth');
+
 let Activity = require('../models/activity.model');
 
 router.route('/').get((req, res) => {
     Activity.find()
-        .then(activities => res.json(console.log(activities)))
+        .then(activities => { res.render('activities', activities) })
         .catch(err => res.status(400).json('Error: ' + err))
 });
 
-router.route('/add').post((req, res) => {
-    const title = req.body.title;
-    const description = req.body.description;
+router.route('/create').get((req, res) => {
+    res.render('activities-create');
+});
+
+router.route('/create').post(ensureAuthenticated, (req, res) => {
+    const { title, likes, description, budget, budgetContext, location } = req.body;
 
     const newActivity = new Activity({
         title,
-        description
+        description,
+        budget,
+        budgetContext,
+        location,
+        likes: req.user.profile
     });
 
     newActivity.save()
-        .then(() => res.json('Activity added!'))
+        .then(() => res.redirect('/activities'))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
