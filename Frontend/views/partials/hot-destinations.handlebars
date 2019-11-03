@@ -1,9 +1,18 @@
-<section class="row">
-    {{#each activities}}
-        <div class="card">
-            {{this.title}}
-            {{this.description}}
-            Public: {{this.public}}
+{{#each activities}}
+<div class="hot-dest-card">
+    <div class="hot-dest-img">
+        <img src="" />
+    </div>
+    <div class="hot-dest-text">
+        <h4>City Name</h4>
+        <div class="blue-location">
+            <img class="location-icon" src="../images/icons/map-marker-alt-solid.svg" />
+            <div class="location-name">Country Name</div>
         </div>
-    {{/each}}
-</section>
+       
+        <span>122 event this week</span>
+        
+    </div>
+</div>
+{{/each}}
+

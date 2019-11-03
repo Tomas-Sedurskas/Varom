@@ -12,6 +12,7 @@ body{
     width: 964px;
     padding: 0 20px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 ul{
     margin: 0;
@@ -19,8 +20,21 @@ ul{
     list-style: none;
 }
 .row{
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
+}
+.title-row{
+    align-items: center;
+    padding: 20px 0;
+}
+.title-row a {
+    flex: 1;
+    text-align: right;
+}
+.title-row h2{
+    flex: 1;
+    text-align: left;
 }
 .col{
     display: flex;
@@ -63,4 +77,19 @@ ul{
     font-weight: 700;
     padding: 12px 0;
     color: grey;
+}
+.blue-location{
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.location-icon{
+    padding-right: 4px;
+    height: 14px;
+}
+.location-name{
+    color: #5446DB;
+    font-weight: 700;
+    font-size: 12px;
 }
