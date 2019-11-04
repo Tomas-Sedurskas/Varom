@@ -10,7 +10,6 @@ body{
     display: block;
     margin: 0 auto;
     width: 964px;
-    padding: 0 20px;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -20,11 +19,11 @@ ul{
     list-style: none;
 }
 .row{
-    width: 100%;
     display: flex;
     flex-flow: row nowrap;
 }
 .title-row{
+    width: 100%;
     align-items: center;
     padding: 20px 0;
 }
@@ -39,7 +38,7 @@ ul{
 .col{
     display: flex;
     flex: 1;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
 }
 .gutter{
     display: flex;

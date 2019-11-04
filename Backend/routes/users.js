@@ -70,7 +70,7 @@ router.route('/register').post((req, res) => {
 
                         newUser.password = hash;
                         newUser.save()
-                            .then(() => res.redirect('/success'))
+                            .then(() => res.redirect('/users/login'))
                             .catch(err => res.status(400).json('Error: ' + err));
                     }))
                 }
@@ -92,7 +92,7 @@ router.route('/login').get((req, res) => {
 
 router.route('/login').post((req, res, next) => {
     passport.authenticate('local', {
-        successRedirect: '/profile',
+        successRedirect: '/explore',
         failureRedirect: '/users/login'
     })(req, res, next)
 });

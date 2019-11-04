@@ -1,0 +1,45 @@
+.profile-header{
+    background: #fff;
+    width: 100%;
+    padding: 32px;
+    box-sizing: border-box;
+}
+.profile-avatar{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: blue;
+    margin-right: 32px;
+}
+.profile-display-name{
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 900;
+}
+.profile-edit-button{
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.profile-friend-button {
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.button{
+    box-sizing: border-box;
+    text-align: center;
+    background: #fff;
+    border-radius: 4px;
+    border: 2px solid #B2B2B2;
+    padding: 8px 0;
+    width: 240px;
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 14px;
+}
+.button-blue{
+    background: #5446DB;
+    border: none;
+    color: white;
+}

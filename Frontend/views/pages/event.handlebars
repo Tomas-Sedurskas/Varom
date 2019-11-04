@@ -37,9 +37,7 @@
         <a href="/myEvents/{{event._id}}/event-details" class="event-button">Event Details</a>
     </div>
     
-    <form class="row" action="/myEvents/{{event._id}}/share" method="post">
-        <button class="event-button">Share Event</button>
-    </form>
+    
     
 </div>
 <!-- Banner will be the first activity img -->
@@ -53,14 +51,10 @@ Public: {{event.public}}<br>
 <br><br><br>
 
 
-<br><br><br>
-
-<a href="/myEvents/{{event._id}}/activities">Event Activities</a>
-
-<br><br><br>
 <h2>Trip photos</h2>
 <a href="/myEvents/{{event._id}}/photos">Add photo</a>
 
-<br><br>
-<h2>Post Event</h2>
-
+<br><br><br>
+<form class="row" action="/myEvents/{{event._id}}/share" method="post">
+    <button class="event-button">Share Event</button>
+</form>
