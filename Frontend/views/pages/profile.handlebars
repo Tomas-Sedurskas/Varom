@@ -34,27 +34,20 @@
             </div>
         </div>
     </div>
-    
-    
 
-   
-
-    <h1>Data</h1>
-    {{#each data.events}}
-        {{this.title}}<br><br>
-    {{/each}}
-
-
-    <div class="row">
-        <h2>My photos</h2>
-        <ul>
-            <li></li>
-        </ul>
-    </div>
-    <div class="row">
+    <div class="row title-row">
         <h2>My story</h2>
-        <ul>
-            <li></li>
-        </ul>
     </div>
+    <div class="row">
+        {{> my-stories}}
+    </div>
+
+    <div class="row title-row">
+        <h2>My Photos</h2>
+    </div>
+    <div class="row">
+        {{> photos}}
+    </div>
+    
+    
 </div>
